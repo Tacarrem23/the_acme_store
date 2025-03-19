@@ -46,3 +46,18 @@ async function fetchUsers() {
   const result = await client.query('SELECT * FROM users');
   return result.rows;
 }
+
+// Mock data for products
+const products = [
+  { id: 1, name: 'Widget A', price: 25.99 },
+  { id: 2, name: 'Widget B', price: 15.49 },
+  { id: 3, name: 'Widget C', price: 10.00 },
+];
+
+// Function to get all products
+function getProducts() {
+  return products;
+}
+
+module.exports = { getProducts };
+
